@@ -1,3 +1,11 @@
+:root{
+  --text: #111;
+  --red: #f25f64;
+  --green: #cfe6a6;
+  --blue: #65c5e7;
+  font-size: 62.5%;
+}
+
 .pagina-cadastro1 {
   display: flex;
   align-items: center;
@@ -10,18 +18,15 @@
   height: auto;
 }
 
-/* 3) Centralizar apenas o main que vem logo depois do header .pagina-cadastro1
-   Essa regra usa o seletor adjacente para não afetar outros mains. */
 .pagina-cadastro1 + .container.page-main {
   display: flex;
   flex-direction: column;
-  align-items: center;     /* centraliza horizontalmente */
-  justify-content: center; /* centraliza verticalmente */
-  min-height: 80vh;        /* ocupa a maior parte da tela */
+  align-items: center;    
+  justify-content: center;
+  min-height: 80vh;        
   gap: 2rem;
 }
 
-/* tamanho do ícone "plus" na primeira página */
 .page-main img {
   width: 6rem;
   height: auto;
@@ -30,13 +35,13 @@
 .page-title {
   font-size: 2rem;
   margin: 0;
-  text-align: center; /* centraliza o texto */
+  text-align: center; 
 }
-/* 4) Página 2: header com back à esquerda e título centralizado */
+
 .pagina-cadastro2 {
   display: flex;
   align-items: center;
-  justify-content: center;   /* centra o título */
+  justify-content: center;  
   padding: 1.6rem;
   position: relative;
   background-color: #ffffff;
@@ -44,8 +49,8 @@
 
 .pagina-cadastro2 img {
   position: absolute;
-  left: 1.6rem;    /* distância da borda esquerda */
-  width: 2.4rem;   /* tamanho do ícone */
+  left: 1.6rem;   
+  width: 2.4rem;  
   height: auto;
   cursor: pointer;
 }
@@ -53,11 +58,10 @@
 .pagina-cadastro2 h1 {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #111;
+  color: var(--text);
   margin: 0;
 }
 
-/* 5) Dados-cadastro (mantive a sua versão básica e segura) */
 .dados-cadastro {
   display: flex;
   flex-direction: column;
@@ -87,16 +91,15 @@
   text-decoration: none;
 }
 
-pagina-cadastro3 {
+.pagina-cadastro3 {
   display: flex;
   align-items: center;
-  justify-content: center;   /* título centralizado */
-  padding: 1.6rem;           /* espaçamento interno */
-  position: relative;        /* permite posicionar o back-icon à esquerda */
+  justify-content: center;   
+  padding: 1.6rem;           
+  position: relative;       
   background-color: #ffffff;
 }
 
-/* botão de voltar no canto esquerdo */
 .pagina-cadastro3 .back-icon {
   position: absolute;
   left: 1.6rem;
@@ -105,25 +108,22 @@ pagina-cadastro3 {
   display: block;
 }
 
-/* título centralizado (igual aos outros) */
 .pagina-cadastro3 .page-title {
   font-size: 2.4rem;
   margin: 0;
   font-weight: 700;
-  color: #111;
+  color: var(--text);
 }
 
-/* main - espaço entre conteúdo e botão (mantém tudo bem distribuído na tela) */
 .lista-interesses {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  min-height: calc(100vh - 12.0rem); /* deixa espaço para header e footer (em rem) */
+  min-height: calc(100vh - 12.0rem); 
   padding: 0 2rem;
 }
 
-/* subtítulo pequeno e centralizado */
 .lista-interesses .subtitle {
   font-size: 1.4rem;
   color: #333;
@@ -133,7 +133,6 @@ pagina-cadastro3 {
   margin-bottom: 0; 
 }
 
-/* lista sem marcadores e alinhada com bolinhas personalizadas */
 .interests {
   list-style: none;
   padding: 0;
@@ -145,16 +144,14 @@ pagina-cadastro3 {
   gap: 1.6rem;
 }
 
-/* cada item tem uma bolinha vermelha à esquerda (pseudo-element) */
 .interests li {
   position: relative;
-  padding-left: 4.4rem;     /* espaço para a bolinha e separação */
+  padding-left: 4.4rem;     
   font-size: 1.8rem;
-  color: #111;
+  color: var(--text);
   line-height: 1.6;
 }
 
-/* bolinha vermelha */
 .interests li::before {
   content: "";
   position: absolute;
@@ -164,22 +161,20 @@ pagina-cadastro3 {
   width: 1.8rem;
   height: 1.8rem;
   border-radius: 50%;
-  background: #f25f64; /* cor vermelha */
+  background: var(--red); 
   box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.06);
 }
 
-/* footer com botão centralizado */
 .base-cadastro3 {
   display: flex;
   justify-content: center;
   padding: 3.2rem 2rem;
 }
 
-/* botão continuar grande e central */
 .continue-btn {
   display: inline-block;
   text-decoration: none;
-  background: #cfe6a6;        /* verde-claro */
+  background: var(--green);        
   color: #ffffff;
   padding: 1.2rem 4.0rem;
   border-radius: 0.8rem;
@@ -205,7 +200,6 @@ pagina-cadastro3 {
   display: block;
 }
 
-/* título principal */
 .pagina-cadastro4 .page-title {
   font-size: 2.4rem;
   margin: 0;
@@ -213,7 +207,6 @@ pagina-cadastro3 {
   color: var(--text);
 }
 
-/* main - organiza conteúdo verticalmente e centraliza */
 .cadastro4-main {
   display: flex;
   flex-direction: column;
@@ -224,7 +217,6 @@ pagina-cadastro3 {
   background: #fff;
 }
 
-/* subtítulo (informações adicionais) */
 .infos-add {
   font-size: 1.4rem;
   color: #333;
@@ -232,7 +224,6 @@ pagina-cadastro3 {
   text-align: center;
 }
 
-/* título do bloco de necessidades especiais (mantive simples) */
 .cadastro4-main h3 {
   font-size: 1.8rem;
   background: var(--red);
@@ -244,7 +235,6 @@ pagina-cadastro3 {
   text-align: center;
 }
 
-/* seção "Seus objetivos" */
 .objetivos {
   font-size: 1.6rem;
   color: var(--text);
@@ -254,7 +244,6 @@ pagina-cadastro3 {
   padding-left: 0.4rem;
 }
 
-/* lista de tópicos com bolinha vermelha à esquerda */
 .objetivos-topicos {
   list-style: none;
   padding: 0;
@@ -274,7 +263,7 @@ pagina-cadastro3 {
   line-height: 1.6;
 }
 
-/* bolinha vermelha */
+
 .objetivos-topicos li::before {
   content: "";
   position: absolute;
@@ -284,22 +273,15 @@ pagina-cadastro3 {
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 50%;
-  background: var(--red);
+  background: var(--red); 
   box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.06);
 }
 
-/* footer com botão Finalizar centralizado */
-.cadastro4-footer {
-  display: flex;
-  justify-content: center;
-  padding: 3.2rem 2rem;
-}
-/* botão Finalizar básico, igual à imagem */
 .finish-btn {
   display: inline-block;
   text-decoration: none;
-  background: #d5e7a2;      /* verde-claro do exemplo */
-  color: #ffffff;           /* texto branco */
+  background: #d5e7a2;     
+  color: #ffffff;           
   padding: 1.2rem 4rem;
   border-radius: 0.8rem;
   font-size: 2rem;
@@ -308,11 +290,52 @@ pagina-cadastro3 {
   border: none;
 }
 
-/* footer: mantém o botão no fim da página, centralizado */
 .cadastro4-footer {
   display: flex;
   justify-content: center;
   padding: 2rem 0;
-  background: #ffffff;      /* fundo branco para o rodapé */
-  margin-top: auto;         /* empurra o rodapé pro fim da tela */
+  background: #ffffff;      
+  margin-top: auto;        
+}
+.pagina-cadastro5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #ffffff;
+  gap: 2.4rem;
+  padding: 2rem;
+}
+
+.pagina-cadastro5 img {
+  width: 10rem;
+  height: auto;
+  display: block;
+}
+
+.pagina-cadastro5 h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  margin: 0;
+}
+
+.pagina-cadastro5 .cadastro5-footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.pagina-cadastro5 .cadastro5-footer a {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--blue);
+  color: #ffffff;
+  padding: 1.2rem 4rem;
+  border-radius: 0.6rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
 }
