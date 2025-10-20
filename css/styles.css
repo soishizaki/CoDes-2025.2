@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;700&family=Figtree:wght@400;500;700&display=swap');
+
 :root{
   --text: #111;
   --red: #f25f64;
   --green: #cfe6a6;
   --blue: #65c5e7;
+  --yellow: #fef14d;
+  --babyblue: #bde8f9;
+  --font-main: "Figtree", sans-serif;
+  --font-title: "Belanosima", sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
   font-size: 62.5%;
 }
 
@@ -28,14 +37,16 @@
 }
 
 .page-main img {
-  width: 6rem;
+  width: 24rem;
   height: auto;
 }
 
 .page-title {
-  font-size: 2rem;
+  font-size: 2.8rem;
   margin: 0;
   text-align: center; 
+  font-family: var(--font-title);
+  font-weight: var(--fw-regular);
 }
 
 .pagina-cadastro2 {
@@ -57,7 +68,8 @@
 
 .pagina-cadastro2 h1 {
   font-size: 2.2rem;
-  font-weight: 700;
+  font-family: var(--font-title);
+  font-weight: var(--fw-regular);
   color: var(--text);
   margin: 0;
 }
@@ -73,22 +85,43 @@
 }
 
 .dados-cadastro ul {
+  font-family: var(--font-main);
   list-style: none;
-  text-align: center;
   font-size: 1.8rem;
   line-height: 1.8;
-  color: #222222;
+  color: #222;
+  width: 100%;
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.dados-cadastro li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* separa texto e caixa */
+  margin-bottom: 4rem;          /* espaçamento entre linhas */
 }
 
 .dados-cadastro footer a {
   display: inline-block;
   text-align: center;
-  font-size: 1.6rem;
-  background: #cce5b5;
+  font-size: 2.4rem;
+  font-family: var(--font-title);
+  background: var(--green);
   color: #ffffff;
-  padding: 1rem 2rem;
+  padding: 2rem 4rem;
   border-radius: 0.5rem;
   text-decoration: none;
+}
+
+.campo-vazio {
+  flex-shrink: 0;
+  width: 16rem;
+  height: 2.4rem;
+  background-color: var(--babyblue);
+  border: 0.2rem solid #000;
+  border-radius: 0.6rem;
 }
 
 .pagina-cadastro3 {
@@ -109,10 +142,11 @@
 }
 
 .pagina-cadastro3 .page-title {
-  font-size: 2.4rem;
+  font-size: 2.4rem; 
   margin: 0;
-  font-weight: 700;
   color: var(--text);
+  font-family: var(--font-title);
+  font-weight: var(--fw-regular);
 }
 
 .lista-interesses {
@@ -126,11 +160,12 @@
 
 .lista-interesses .subtitle {
   font-size: 1.4rem;
+  font-family: var(--font-main);
   color: #333;
-  font-weight: 400;
   text-align: center;
   margin-top: 0.6rem;
   margin-bottom: 0; 
+  font-weight: var(--fw-regular);
 }
 
 .interests {
@@ -142,6 +177,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  font-family: var(--font-main);
 }
 
 .interests li {
@@ -176,10 +212,11 @@
   text-decoration: none;
   background: var(--green);        
   color: #ffffff;
-  padding: 1.2rem 4.0rem;
+  padding: 2.0rem 4.0rem;
   border-radius: 0.8rem;
-  font-size: 2.0rem;
-  font-weight: 700;
+  font-size: 2.4rem;
+  font-family: var(--font-title);
+  font-weight: var(--fw-medium);
   text-align: center;
 }
 
@@ -202,8 +239,9 @@
 
 .pagina-cadastro4 .page-title {
   font-size: 2.4rem;
+  font-family: var(--font-title);
   margin: 0;
-  font-weight: 700;
+  font-weight: var(--fw-regular);
   color: var(--text);
 }
 
@@ -219,6 +257,8 @@
 
 .infos-add {
   font-size: 1.4rem;
+  font-family: var(--font-main);
+  font-weight: var(--fw-regular);
   color: #333;
   margin: 0;
   text-align: center;
@@ -231,15 +271,18 @@
   padding: 0.9rem 1.6rem;
   border-radius: 0.8rem;
   margin: 0.6rem 0;
-  font-weight: 700;
+  font-weight: var(--fw-medium);
+  font-family: var(--font-title);
   text-align: center;
 }
 
 .objetivos {
   font-size: 1.6rem;
+  font-family: var(--font-main);
+  font-weight: var(--fw-regular);
   color: var(--text);
   margin: 0.6rem 0 0;
-  align-self: flex-start;
+  align-self: center;
   max-width: 36rem;
   padding-left: 0.4rem;
 }
@@ -259,8 +302,9 @@
   position: relative;
   padding-left: 3.6rem;
   font-size: 1.6rem;
+  font-family: var(--font-main);
   color: var(--text);
-  line-height: 1.6;
+  line-height: 2.6;
 }
 
 
@@ -272,6 +316,7 @@
   transform: translateY(-50%);
   width: 1.6rem;
   height: 1.6rem;
+  border: 0.2rem solid #000;
   border-radius: 50%;
   background: var(--red); 
   box-shadow: 0 0.2rem 0.4rem rgba(0,0,0,0.06);
@@ -280,12 +325,13 @@
 .finish-btn {
   display: inline-block;
   text-decoration: none;
-  background: #d5e7a2;     
+  background: var(--green);     
   color: #ffffff;           
-  padding: 1.2rem 4rem;
+  padding: 2.0rem 4rem;
   border-radius: 0.8rem;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: 2.4rem;
+  font-weight: var(--fw-regular);
+  font-family: var(--font-title);
   text-align: center;
   border: none;
 }
@@ -309,14 +355,15 @@
 }
 
 .pagina-cadastro5 img {
-  width: 10rem;
+  width: 20rem;
   height: auto;
   display: block;
 }
 
 .pagina-cadastro5 h1 {
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: var(--fw-regular);
+  font-family: var(--font-title);
   color: var(--text);
   text-align: center;
   margin: 0;
@@ -336,6 +383,143 @@
   padding: 1.2rem 4rem;
   border-radius: 0.6rem;
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: var(--fw-regular);
+  font-family: var(--font-title);
   text-align: center;
+}
+
+.pagina-index {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* fica à esquerda */
+  padding: 1.2rem;
+}
+
+.pagina-index img {
+  width: 3rem;   /* diminui o ícone lateral */
+  height: auto;
+}
+
+.index-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem;
+}
+
+.index-main img {
+  width: 24rem;
+  height: auto;
+}
+
+.index-nome{
+  font-size: 1.5rem;
+  font-weight: var(--fw-regular);
+  font-family: var(--font-main);
+  color: var(--text);
+  text-align: center;
+  margin: 0;
+}
+
+.index-sugestões {
+  position: relative;
+  text-align: center;
+  font-family: var(--font-title);
+  font-weight: var(--fw-regular);
+  font-size: 1.8rem;
+  color: var(--text);
+  margin: 3.2rem 0 2rem;
+}
+
+.index-sugestões::before {
+  content: "";
+  position: absolute;
+  top: -1.6rem;          /* distância acima do texto */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;          /* ocupa toda a largura da tela */
+  height: 0.6rem;        /* espessura da linha */
+  background: var(--yellow);
+  border-radius: 0.2rem;
+  pointer-events: none;
+}
+
+.lista-sugestões {
+  display: flex;                  
+  justify-content: center;       
+  gap: 1.6rem;                   
+  list-style: none;               
+  margin: 1.6rem 0;
+  padding: 0;
+  position: relative;
+}
+
+
+.lista-sugestões li {
+  background-color: var(--blue);
+  border-radius: 0.8rem;
+  padding: 1rem 1.6rem;
+  font-family: var(--font-main);
+  font-size: 1.4rem;
+  color: #fff;
+  text-align: center;
+}
+.lista-sugestões a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.lista-sugestões::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1.6rem;
+  width: 100vw;           /* ocupa toda a largura da tela */
+  height: 0.6rem;
+  background: var(--yellow);
+  border-radius: 0.2rem;
+  pointer-events: none;
+}
+
+.index-footer {
+  position: fixed;                /* fixa no final da tela */
+  left: 0;
+  bottom: 0;
+  width: 100vw;                   /* ocupa toda a largura da tela */
+  background: var(--blue);        /* azul da paleta */
+  padding: 1.6rem 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+
+.index-lista-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;                    /* espaçamento entre os “botões” */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.index-lista-footer li {
+  background: var(--babyblue);
+  border-radius: 4.8rem;          /* deixa oval */
+  padding: 1rem 2.4rem;
+  font-family: var(--font-main);
+  font-size: 1.4rem;
+  color: var(--text);
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.index-lista-footer a {
+  text-decoration: none;
+  color: inherit;
 }
