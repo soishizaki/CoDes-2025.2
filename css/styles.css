@@ -752,3 +752,348 @@
   font-size: 1.6rem;
   font-family: var(--font-main);
 }
+
+/* FLUXO 3 - 1  */
+
+.main-3-1 {
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* duas colunas */
+  justify-content: center;
+  align-items: start;
+  column-gap: 4rem;
+  row-gap: 1.5rem;
+  padding: 2rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative; /* necessário pra linha vertical */
+}
+
+/* linha amarela de pé */
+.main-3-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px; 
+  background-color: var(--yellow);
+  transform: translateX(-50%);
+}
+
+
+.main-3-1 h2 {
+  font-family: var(--font-title);
+  font-weight: var(--fw-regular);
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+/* garante que cada título fique sobre sua lista */
+.main-3-1 h2:nth-of-type(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+.main-3-1 .lista-finalizadas {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.main-3-1 h2:nth-of-type(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+.main-3-1 .lista-andamento {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.lista-finalizadas,
+.lista-andamento {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  width: 280px;
+  box-sizing: border-box;
+}
+
+.lista-finalizadas li,
+.lista-andamento li,
+.lista-andamento li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-family: var(--font-main);
+  font-weight: var(--fw-regular);
+  font-size: 1.9rem;
+  border-radius: 0.6rem;
+  width: 100%;
+  min-height: 60px;
+  padding: 1rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.lista-finalizadas li {
+  background-color: var(--red);
+}
+
+.lista-andamento li,
+.lista-andamento li a {
+  background-color: var(--green);
+}
+
+/* link ocupa todo o botão verde */
+.lista-andamento li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FLUXO 3 - 2 */
+
+.main-3-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  flex: 1;
+}
+
+.main-3-2 p {
+  max-width: 700px;
+  text-align: justify;
+  font-family: var(--font-main);
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #000;
+  margin: 0;
+}
+
+.botoes-3-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;                 
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.botoes-3-2 h2,
+.botoes-3-2 h2 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: var(--green);
+  color: #fff;
+  font-family: var(--font-title);
+  font-weight: var(--fw-regular);
+  font-size: 2rem;
+  border-radius: 0.6rem;
+  width: 220px;
+  min-height: 60px;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.botoes-3-2 h2 a {
+  width: 100%;
+  height: 100%;
+}
+
+/* FLUXO 3 - 3  */
+.lista-3-3 {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  justify-content: flex-start;
+  gap: 1.5rem;
+  padding: 6rem;
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: 2rem;
+  text-align: left;          
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.lista-3-3 li {
+  width: 80%;
+  max-width: 600px;
+  text-align: left;
+}
+
+/* a imagem do relógio (hora.png) centralizada */
+.lista-3-3 li img[alt~="hora"] {
+  display: block;
+  margin: 0 auto; 
+}
+
+.footer-3-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.footer-3-3 h2,
+.footer-3-3 h2 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: var(--green);
+  color: #fff;
+  font-family: var(--font-title);
+  font-weight: var(--fw-regular);
+  font-size: 4rem;
+  border-radius: 0.6rem;
+  width: 220px;
+  min-height: 60px;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.footer-3-3 h2 a {
+  width: 100%;
+  height: 100%;
+}
+
+/* FLUXO 3 - 4 */
+
+.lista-3-4 {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  font-size: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.lista-3-4 li:first-child {
+  background-color: var(--baby-blue, #b3e5fc);
+  width: 100%;                 /* ocupa a tela toda */
+  padding: 2rem 0 0 0;         
+  text-align: center;
+  color: #000;
+  font-weight: var(--fw-regular);
+  box-sizing: border-box;
+}
+
+.lista-3-4 li:last-child {
+  background-color: var(--baby-blue, #b3e5fc); 
+  width: 100%;
+  display: flex;
+  justify-content: center;     
+  margin-top: -1px;            
+  padding-bottom: 2rem;        
+  box-sizing: border-box;
+}
+
+
+.lista-3-4 img {
+  width: 80%;                  
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.footer-3-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.footer-3-4 h2,
+.footer-3-4 h2 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: var(--green);
+  color: #fff;
+  font-family: var(--font-title);
+  font-weight: var(--fw-regular);
+  font-size: 3rem;
+  border-radius: 0.6rem;
+  width: 260px;
+  min-height: 60px;
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.footer-3-4 h2 a {
+  width: 100%;
+  height: 100%;
+}
+
+/* FLUXO 3 - 5 */
+.body-3-5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--font-title);
+  text-align: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  padding: 1rem;
+  box-sizing: border-box;
+  font-weight: var(--fw-regular);
+}
+
+/* imagem maior, preservando proporção (não deforma) */
+.body-3-5 img {
+  width: clamp(120px, 20vw, 220px);
+  height: auto;          
+  display: block;
+  object-fit: contain;  
+}
+
+
+.body-3-5 h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 4.5vw, 2.8rem);
+  font-weight: var(--fw-regular);
+  line-height: 1.05;
+  color: #000;
+}
+
+.body-3-5 footer h2,
+.body-3-5 footer h2 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.6rem;
+  width: clamp(200px, 45vw, 260px);
+  height: clamp(48px, 8vw, 60px);
+  font-size: clamp(1.2rem, 3.5vw, 2rem);
+  font-weight: var(--fw-regular);
+}
