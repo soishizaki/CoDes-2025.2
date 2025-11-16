@@ -1,33 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fluxo 3 tela 3</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluxo 3 tela 3</title>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="JS/script.js"></script>
 </head>
 <body>
-    <header class="header-2-e-3">
-         <img class="botao-back" src = "img/back.png" alt = 'botão de back'>
-         <h1> Atividade pintura </h1>
-         <img class="botao-x" src = "img/x.png" alt = 'botão x'>
-    </header>
-    <main>
-        <ul class="lista-3-3">
-            <li> A atividade gerou entretenimento? </li>
-            <li> <img src = "img/estrelas.png" alt = 'cinco estrelas enfileiradas'> </li>
-            <li> A atividade foi fácil de realizar? </li>
-            <li> <img src = "img/estrelas.png" alt = 'cinco estrelas enfileiradas'> </li>
-            <li> A atividade foi educativa? </li>
-            <li> <img src = "img/estrelas.png" alt = 'cinco estrelas enfileiradas'> </li>
-            <li> Quanto tempo durou? </li>
-            <li> <img src = "img/hora.png" alt = 'hora'> </li>
-        </ul>
+  <header class="header-2-e-3">
+    <a href="fluxo3_2.html">
+    <img class="botao-back" src="img/back.png" alt="botão de back"></a>
+    <h1> Atividade pintura </h1>
+    <a href="index.html">
+    <img class="botao-x" src="img/x.png" alt="botão x"></a>
+  </header>
 
-    </main>
-    <footer class="footer-3-3">
-        <h2> <a href = "fluxo3_4.html"> Continuar </a> </h2>
-    </footer>
+  <main>
+    <ul class="lista-3-3">
+      <li class="pergunta">A atividade gerou entretenimento?</li>
+
+      <li class="acao">
+        <div class="rating" data-group="1" role="radiogroup" aria-label="Avaliação: entretenimento">
+          <button class="star" type="button" data-value="1" aria-label="1 estrela">
+            <img src="img/estrelapreta.png" alt="estrela 1">
+          </button>
+          <button class="star" type="button" data-value="2" aria-label="2 estrelas">
+            <img src="img/estrelapreta.png" alt="estrela 2">
+          </button>
+          <button class="star" type="button" data-value="3" aria-label="3 estrelas">
+            <img src="img/estrelapreta.png" alt="estrela 3">
+          </button>
+          <button class="star" type="button" data-value="4" aria-label="4 estrelas">
+            <img src="img/estrelapreta.png" alt="estrela 4">
+          </button>
+          <button class="star" type="button" data-value="5" aria-label="5 estrelas">
+            <img src="img/estrelapreta.png" alt="estrela 5">
+          </button>
+        </div>
+      </li>
+
+      <li class="pergunta">A atividade foi fácil de realizar?</li>
+
+      <li class="acao">
+        <div class="rating" data-group="2" role="radiogroup" aria-label="Avaliação: facilidade">
+          <button class="star" type="button" data-value="1" aria-label="1 estrela">
+            <img src="img/estrelapreta.png" alt="estrela 1">
+          </button>
+          <button class="star" type="button" data-value="2" aria-label="2 estrelas">
+            <img src="img/estrelapreta.png" alt="estrela 2">
+          </button>
+          <button class="star" type="button" data-value="3" aria-label="3 estrelas">
+            <img src="img/estrelapreta.png" alt="estrela 3">
+          </button>
+          <button class="star" type="button" data-value="4" aria-label="4 estrelas">
+            <img src="img/estrelapreta.png" alt="estrela 4">
+          </button>
+          <button class="star" type="button" data-value="5" aria-label="5 estrelas">
+            <img src="img/estrelapreta.png" alt="estrela 5">
+          </button>
+        </div>
+      </li>
+
+      <li class="pergunta">A atividade foi educativa?</li>
+
+      <li class="acao">
+        <div class="rating" data-group="3" role="radiogroup" aria-label="Avaliação: educativo">
+          <button class="star" type="button" data-value="1" aria-label="1 estrela">
+            <img src="img/estrelapreta.png" alt="estrela 1">
+          </button>
+          <button class="star" type="button" data-value="2" aria-label="2 estrelas">
+            <img src="img/estrelapreta.png" alt="estrela 2">
+          </button>
+          <button class="star" type="button" data-value="3" aria-label="3 estrelas">
+            <img src="img/estrelapreta.png" alt="estrela 3">
+          </button>
+          <button class="star" type="button" data-value="4" aria-label="4 estrelas">
+            <img src="img/estrelapreta.png" alt="estrela 4">
+          </button>
+          <button class="star" type="button" data-value="5" aria-label="5 estrelas">
+            <img src="img/estrelapreta.png" alt="estrela 5">
+          </button>
+        </div>
+      </li>
+
+      <li class="pergunta">Quanto tempo durou?</li>
+
+      <li class="acao">
+        <label for="duracao" class="label-duracao">Digite a duração (hh:mm)</label>
+        <input id="duracao" class="duracao-input" type="text" inputmode="numeric" placeholder="ex: 00:30" aria-label="Quanto tempo durou">
+      </li>
+    </ul>
+  </main>
+
+  <footer class="footer-3-3">
+    <a class="finish-btn" href="fluxo3_4.html"> Continuar </a>
+  </footer>
 </body>
 </html>
